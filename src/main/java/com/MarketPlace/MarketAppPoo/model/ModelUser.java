@@ -1,6 +1,14 @@
 package com.MarketPlace.MarketAppPoo.model;
 
+import jakarta.persistence.*;
+
+@Entity // Responsável por criar a tabela
+@Table(name = "usuarios") // @Table, resposável por modificações/adições a tabela
 public class ModelUser {
+
+    @Id // Gerar chave primária
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Implementa auto incremento
+    private int cod; // responsável pela chave primária
 
     private String nome;
     private int idade;
@@ -12,6 +20,15 @@ public class ModelUser {
 
 
     // Getters and Setters
+
+
+    public int getCod() {
+        return cod;
+    }
+
+    public void setCod(int cod) {
+        this.cod = cod;
+    }
 
     public String getNome() {
         return nome;
