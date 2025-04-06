@@ -1,12 +1,10 @@
 package com.MarketPlace.MarketAppPoo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 // Modelagem dos produtos
 @Entity
+@Table(name = "produto")
 public class Produtos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
