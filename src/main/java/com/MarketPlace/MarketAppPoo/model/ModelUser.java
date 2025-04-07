@@ -12,7 +12,6 @@ public class ModelUser {
 
     private String nome;
     private int idade;
-    private String rg;
     private String cpf;
     private int telefone;
     private String email;
@@ -44,14 +43,6 @@ public class ModelUser {
 
     public void setIdade(int idade) {
         this.idade = idade;
-    }
-
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
     }
 
     public String getCpf() {
