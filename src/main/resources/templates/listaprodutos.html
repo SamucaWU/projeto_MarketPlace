@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<h2>Lista de Produtos</h2>
+<table>
+    <thead>
+    <tr>
+        <th>ID </th>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Peso</th>
+        <th>Quantidade</th>
+        <th>Categoria</th>
+        <th>Descrição</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Change the model attribute to 'listaprodutos' -->
+    <tr th:each="produto : ${listaprodutos}">
+        <td th:text="${produto.idprodutos}"></td>
+        <td th:text="${produto.nome}"></td>
+        <td th:text="${produto.preco}"></td>
+        <td th:text="${produto.peso}"></td>
+        <td th:text="${produto.quantidade}"></td>
+        <td th:text="${produto.categoria}"></td>
+        <td th:text="${produto.descricao}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -29,32 +29,5 @@
 
     <button type="submit">Cadastra-se</button>
 </form>
-</p>
-
-<h2>Lista de Produtos</h2>
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Preco</th>
-        <th>Peso</th>
-        <th>Quantidade</th>
-        <th>Descrição</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="produto : ${produtos}">
-        <td th:text="${produto.idprodutos}"></td>
-        <td th:text="${produto.nome}"></td>
-        <td th:text="${produto.preco}"></td>
-        <td th:text="${produto.peso}"></td>
-        <td th:text="${produto.quantidade}"></td>
-        <td th:text="${produto.categoria}"></td>
-        <td th:text="${produto.descricao}"></td>
-
-    </tr>
-    </tbody>
-</table>
 </body>
 </html>

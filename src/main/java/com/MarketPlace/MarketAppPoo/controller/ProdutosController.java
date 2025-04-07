@@ -30,4 +30,17 @@ public class ProdutosController {
         produtosService.salvarProduto(produtos);
         return "redirect:/produtos";
     }
+
+}
+@Controller
+@RequestMapping("/produtos/lista")
+class  ListarProdutos{
+    @Autowired
+    private ProdutosService produtosService;
+    @GetMapping
+    public String ListarProdutos(Model model){
+        List<Produtos> listaprodutos = produtosService.listarProdutos();
+        model.addAttribute("listaprodutos", listaprodutos);
+        return  "listaprodutos";
+    }
 }
