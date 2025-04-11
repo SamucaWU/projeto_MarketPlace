@@ -1,3 +1,5 @@
+// Desenvolved by Rafael Paiva 🔥
+
 package com.MarketPlace.MarketAppPoo.controller;
 
 import com.MarketPlace.MarketAppPoo.model.Produtos;
@@ -15,8 +17,9 @@ import java.util.List;
 @Controller
 @RequestMapping("/produtos")
 public class ProdutosController {
+
     @Autowired
-    private ProdutosService produtosService;
+    private ProdutosService produtosService; // Chamamento de ProdutosService
     @GetMapping
     public String listarProduto(Model model){
         List<Produtos> produtos = produtosService.listarProdutos();
