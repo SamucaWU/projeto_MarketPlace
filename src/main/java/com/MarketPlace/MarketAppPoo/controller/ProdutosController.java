@@ -37,7 +37,8 @@ public class ProdutosController {
 }
 @Controller
 @RequestMapping("/produtos/lista")
-class  ListarProdutos{
+class
+ListarProdutos{
     @Autowired
     private ProdutosService produtosService;
     @GetMapping
