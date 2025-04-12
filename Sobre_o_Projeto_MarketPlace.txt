@@ -1,0 +1,18 @@
+* Sobre o projeto marketPlace *
+
+project: Maven language: Java
+Spring Boot: 3.4.4
+
+* Project Metadata *
+group:com.MarketPlace
+Artifact:MarketPlacePoo 
+Name: MarketPlacePoo 
+Description: Projeto de MarketPlace feito em grupo do SENAI SIG
+Package name: com.MarketPlace.past
+
+* dependências *
+
+Spring Boot DevTools
+Lombok
+Spring Web
+Spring Data JPA

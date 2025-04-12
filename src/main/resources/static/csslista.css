@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    justify-content: left;  /* Horizontally center content */
+    align-items: flex-start;  /* Align items at the top */
+    height: 100vh;            /* Full height of the viewport */
+    flex-direction: column;   /* Stack elements vertically */
+}
+h1 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  /* Adds spacing between form elements */
+    width: 300px;  /* You can adjust the width of the form */
+    margin: auto;  /* Centers the form */
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea {
+    padding: 8px;
+    height: 100px;  /* Set a height for the description area */
+    resize: vertical;  /* Allows vertical resizing */
+}
+input {
+    padding: 8px;
+    width: 300px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
