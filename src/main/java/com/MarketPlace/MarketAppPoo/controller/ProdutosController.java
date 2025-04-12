@@ -37,12 +37,8 @@ public class ProdutosController {
 }
 @Controller
 @RequestMapping("/produtos/lista")
-<<<<<<< HEAD
 class
 ListarProdutos{
-=======
-class  ListarProdutos{
->>>>>>> b093e86f6bc61f37116c141fa5527bce07251149
     @Autowired
     private ProdutosService produtosService;
     @GetMapping
