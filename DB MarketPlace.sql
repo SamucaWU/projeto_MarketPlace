@@ -10,7 +10,7 @@ create table  usuario(
 create table produtos(
      id_produtos int primary key auto_increment,
      nome varchar(100) not null,
-     peco decimal(10,2) not null,
+     preco decimal(10,2) not null,
      peso float not null,
      descricao varchar(255),
      quantidade int not null,
@@ -18,3 +18,13 @@ create table produtos(
      id_usuario int not null,
      foreign key (id_usuario) references usuario(id_usuario)
 );
+create table if not exists pagamento(
+    id_pagamento  int primary key  auto_increment,
+    id_usuario int not null,
+    id_produtos int not null ,
+    valor  double not null ,
+    formaPagamento varchar(100) not null ,
+    foreign key (id_usuario) references usuario(id_usuario),
+    foreign key (id_produtos) references produtos(id_produtos)
+);
+
