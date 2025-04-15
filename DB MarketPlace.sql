@@ -23,7 +23,7 @@ create table if not exists pagamento(
     id_usuario int not null,
     id_produtos int not null ,
     valor  double not null ,
-    formaPagamento varchar(100) not null ,
+    formaPagamento varchar(100) not null,
     foreign key (id_usuario) references usuario(id_usuario),
     foreign key (id_produtos) references produtos(id_produtos)
 );
