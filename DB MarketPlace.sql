@@ -30,5 +30,9 @@ create table if not exists pagamento(
     foreign key (id_produtos) references produtos(id_produtos)
 );
 
+<<<<<<< Updated upstream
+ select * from produto;
+>>>>>>> Stashed changes
+=======
  select * from produto;
 >>>>>>> Stashed changes
