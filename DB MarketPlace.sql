@@ -1,8 +1,6 @@
+drop table if exists produtos;
 create database MarketPlace;
 use MarketPlace;
-<<<<<<< Updated upstream
-show tables;
-=======
 show tables;
 create table  usuario(
     id_usuario int primary key auto_increment,
@@ -30,9 +28,3 @@ create table if not exists pagamento(
     foreign key (id_produtos) references produtos(id_produtos)
 );
 
-<<<<<<< Updated upstream
- select * from produto;
->>>>>>> Stashed changes
-=======
- select * from produto;
->>>>>>> Stashed changes
