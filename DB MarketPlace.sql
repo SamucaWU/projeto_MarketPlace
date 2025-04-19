@@ -19,7 +19,7 @@ create table if not exists produtos(
 
      id_produtos int primary key auto_increment,
      nome varchar(100) not null,
-     peco decimal(10,2) not null,
+     preco decimal(10,2) not null,
      peso float not null,
      descricao varchar(255),
      quantidade int not null,
@@ -27,10 +27,10 @@ create table if not exists produtos(
      cod int not null,
      foreign key (cod) references usuario(cod),
      id_usuario int not null,
-     foreign key (id_usuario) references usuario(cod),
-     foreign key (cod) references usuario(cod)
+<
+<<<<<< main     foreign key (id_usuario) references usuario(id_usuario)
 );
 
-show tables;
 
-select * from produtos;
+
+
