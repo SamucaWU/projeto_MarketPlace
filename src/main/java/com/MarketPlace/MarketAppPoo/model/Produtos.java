@@ -1,3 +1,5 @@
+// Desenvolved by Rafael Paiva 🔥
+
 package com.MarketPlace.MarketAppPoo.model;
 
 import jakarta.persistence.*;
@@ -6,9 +8,11 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "produto")
 public class Produtos {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idprodutos;
+
     private  String nome;
     private  double preco;
     private  float peso;
