@@ -1,3 +1,5 @@
+// Desenvolved by Samuel M. Dias🕷️
+
 package com.MarketPlace.MarketAppPoo.model;
 
 import jakarta.persistence.*;
@@ -12,7 +14,6 @@ public class ModelUser {
 
     private String nome;
     private int idade;
-    private String rg;
     private String cpf;
     private int telefone;
     private String email;
@@ -21,6 +22,19 @@ public class ModelUser {
 
     // Getters and Setters
 
+    public ModelUser() {
+
+    }
+
+    public ModelUser(int cod, String nome, int idade, String cpf, int telefone, String email, String senha) {
+        this.cod = cod;
+        this.nome = nome;
+        this.idade = idade;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.email = email;
+        this.senha = senha;
+    }
 
     public int getCod() {
         return cod;
@@ -44,14 +58,6 @@ public class ModelUser {
 
     public void setIdade(int idade) {
         this.idade = idade;
-    }
-
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
     }
 
     public String getCpf() {
