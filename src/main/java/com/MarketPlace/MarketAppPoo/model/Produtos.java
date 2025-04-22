@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 
 // Modelagem dos produtos
 @Entity
-@Table(name = "produto")
+@Table(name = "produtos")
 public class Produtos {
 
     @Id
@@ -19,6 +19,20 @@ public class Produtos {
     private  int quantidade;
     private  String categoria;
     private  String descricao;
+
+    // Add by Samuel M. Dias (foreign key)
+    @ManyToOne
+    @JoinColumn(name = "cod", nullable = false)
+    private ModelUser usuario;
+
+    public ModelUser getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(ModelUser usuario) {
+        this.usuario = usuario;
+    }
+
     public Produtos( Long idprodutos, String nome, double preco, float peso,int quantidade, String categoria, String descricao) {
         this.idprodutos = idprodutos;
         this.nome = nome;
@@ -27,11 +41,14 @@ public class Produtos {
         this.quantidade = quantidade;
         this.categoria = categoria;
         this.descricao = descricao;
+
+
     }
 
     public Produtos() {
 
     }
+
 
     public int getQuantidade() {
         return quantidade;

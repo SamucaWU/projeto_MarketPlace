@@ -1,53 +1,148 @@
+/* Estilo geral do body */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;  /* Cor de fundo suave */
     display: flex;
-    justify-content: left;  /* Horizontally center content */
-    align-items: flex-start;  /* Align items at the top */
-    height: 100vh;            /* Full height of the viewport */
-    flex-direction: column;   /* Stack elements vertically */
-}
-h1 {
-    color: #333;
+    justify-content: center;  /* Centraliza o conteúdo horizontalmente */
+    align-items: flex-start;  /* Alinha os itens ao topo */
+    height: 100vh;  /* Altura total da tela */
+    flex-direction: column;  /* Organiza os itens em coluna */
 }
 
+/* Estilo do título h1 */
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;  /* Espaço abaixo do título */
+}
+
+/* Estilo do formulário */
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;  /* Adds spacing between form elements */
-    width: 300px;  /* You can adjust the width of the form */
-    margin: auto;  /* Centers the form */
+    gap: 15px;  /* Espaçamento entre os campos do formulário */
+    width: 100%;  /* Torna o formulário responsivo */
+    max-width: 400px;  /* Limita a largura máxima do formulário */
+    margin: auto;  /* Centraliza o formulário */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;  /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra para destacar */
 }
 
+/* Estilo para os rótulos de campos */
 label {
     font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
 }
 
+/* Estilo para os campos de entrada de texto */
+input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;  /* Preenche a largura do container */
+    box-sizing: border-box;  /* Inclui o padding nas medidas */
+}
+
+/* Estilo para o botão */
+button {
+    padding: 12px 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Estilo para o campo de textarea (descrição) */
 textarea {
-    padding: 8px;
-    height: 100px;  /* Set a height for the description area */
-    resize: vertical;  /* Allows vertical resizing */
-}
-input {
-    padding: 8px;
-    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;  /* Permite redimensionar verticalmente */
 }
 
-
+/* Estilo para tabelas */
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;  /* Bordas arredondadas para a tabela */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra para destacar */
 }
 
 table, th, td {
     border: 1px solid #ddd;
 }
 
+/* Estilo para células de tabela */
 th, td {
-    padding: 8px;
+    padding: 12px;
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #f8f9fa;  /* Cor de fundo mais suave para cabeçalhos */
+}
+
+/* Links */
+a {
+    text-align: center;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        width: 90%;  /* Ajusta a largura para dispositivos menores */
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea {
+        font-size: 14px;  /* Tamanho de fonte menor em telas menores */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
 }
