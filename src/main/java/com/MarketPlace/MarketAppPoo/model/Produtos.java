@@ -15,28 +15,23 @@ public class Produtos {
     private  int quantidade;
     private  String categoria;
     private  String descricao;
-    public Produtos( Long idprodutos, String nome, double preco, float peso,int quantidade, String categoria, String descricao) {
-        this.idprodutos = idprodutos;
-        this.nome = nome;
-        this.preco = preco;
-        this.peso = peso;
-        this.quantidade = quantidade;
-        this.categoria = categoria;
-        this.descricao = descricao;
+    @Lob
+    private byte[] imagem;
+    @Transient // Importante: não persiste no banco
+    private boolean selecionado;
+    public boolean isSelecionado() {
+        return selecionado;
     }
 
+    public void setSelecionado(boolean selecionado) {
+        this.selecionado = selecionado;
+    }
+    private String imagemUrl; // Se você estiver armazenando a URL da imagem
     public Produtos() {
 
     }
-    // Getters e Setters (usados para acessar os dados no formulário)
-    public int getQuantidade() {
-        return quantidade;
-    }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-
+    // Getters e Setters
     public Long getIdprodutos() {
         return idprodutos;
     }
@@ -57,7 +52,7 @@ public class Produtos {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
@@ -67,6 +62,14 @@ public class Produtos {
 
     public void setPeso(float peso) {
         this.peso = peso;
+    }
+
+    public Integer getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
     }
 
     public String getCategoria() {
@@ -83,5 +86,21 @@ public class Produtos {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public byte[] getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(byte[] imagem) {
+        this.imagem = imagem;
+    }
+
+    public String getImagemUrl() {
+        return imagemUrl;
+    }
+
+    public void setImagemUrl(String imagemUrl) {
+        this.imagemUrl = imagemUrl;
     }
 }
