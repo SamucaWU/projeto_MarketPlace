@@ -1,3 +1,60 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    justify-content: center;  /* Horizontally center content */
+    align-items: center;      /* Vertically center content */
+    height: 100vh;            /* Full height of the viewport */
+    flex-direction: column;   /* Allow stacking of elements in column */
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  /* Adds spacing between form elements */
+    width: 300px;  /* You can adjust the width of the form */
+    margin: auto;  /* Centers the form */
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea {
+    padding: 8px;
+    height: 100px;  /* Set a height for the description area */
+    resize: vertical;  /* Allows vertical resizing */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+input {
+    padding: 8px;
+    width: 300px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
 /* Estilo geral do body */
 body {
     font-family: Arial, sans-serif;
@@ -87,13 +144,21 @@ table, th, td {
     border: 1px solid #ddd;
 }
 
+
+th, td {
+    padding: 8px;
+
 /* Estilo para células de tabela */
 th, td {
     padding: 12px;
+
     text-align: left;
 }
 
 th {
+
+    background-color: #f2f2f2;
+
     background-color: #f8f9fa;  /* Cor de fundo mais suave para cabeçalhos */
 }
 
@@ -142,4 +207,5 @@ a:hover {
         font-size: 14px;
         padding: 8px 12px;
     }
+
 }

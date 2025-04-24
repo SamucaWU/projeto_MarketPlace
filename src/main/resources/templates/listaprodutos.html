@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+
+    <meta charset="UTF-8">
+    <title> Lista de Produtos</title>
+    <link rel="stylesheet" th:href="@{/csslista.css}" />
+
     <title>Lista de Produtos</title>
     <link rel="stylesheet" type="text/css" href="/csslista.css">
+
 </head>
 <body>
 <h2>Lista de Produtos</h2>
 <table>
     <thead>
     <tr>
+
+        <th>Imagem</th>
+        <th>ID</th>
+
         <th>ID </th>
+
         <th>Nome</th>
         <th>Preço</th>
         <th>Peso</th>
@@ -19,8 +30,15 @@
     </tr>
     </thead>
     <tbody>
+
+    <tr th:each="produto : ${listaprodutos}">
+        <td>
+            <img th:if="${produto.imagem}" th:src="@{/produtos/imagem/{id}(id=${produto.idprodutos})}" width="100"/>
+        </td>
+
     <!-- Change the model attribute to 'listaprodutos' -->
     <tr th:each="produto : ${listaprodutos}">
+
         <td th:text="${produto.idprodutos}"></td>
         <td th:text="${produto.nome}"></td>
         <td th:text="${produto.preco}"></td>
@@ -29,7 +47,55 @@
         <td th:text="${produto.categoria}"></td>
         <td th:text="${produto.descricao}"></td>
     </tr>
+
+
+    </tbody>
+</table>
+<a href="/produtos">← Voltar</a>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        display: flex;
+        justify-content: left;  /* Horizontally align content to the left */
+        align-items: flex-start;  /* Align items at the top */
+        height: 100vh;            /* Full height of the viewport */
+        flex-direction: column;   /* Stack elements vertically */
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        background-color: #f4f4f4;
+    }
+
+    td {
+        word-wrap: break-word;
+        max-width: 300px;
+    }
+</style>
+
+</body>
+</html>
+
     </tbody>
 </table>
 </body>
 </html>
+
