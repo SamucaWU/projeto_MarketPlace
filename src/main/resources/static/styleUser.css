@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -66,4 +67,126 @@ th, td {
 
 th {
     background-color: #f2f2f2;
+
+/* Base geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container de cadastro */
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Rótulos */
+label {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botão principal */
+button {
+    padding: 12px;
+    background-color: #4800ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00c8ff;
+}
+
+/* Links estilizados */
+a {
+    padding: 10px 15px;
+    background-color: #f700ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #ff0000;
+}
+
+/* Link para login */
+a.contaStyle {
+    background-color: #0015ff;
+}
+
+a.contaStyle:hover {
+    background-color: #09145a;
+}
+
+/* Mensagem de sucesso */
+.Smensage {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button, input, textarea {
+        font-size: 14px;
+    }
+
 }

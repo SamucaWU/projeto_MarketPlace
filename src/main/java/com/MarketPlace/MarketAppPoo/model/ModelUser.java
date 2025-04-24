@@ -1,6 +1,12 @@
+// Desenvolved by Samuel M. Dias🕷️
+
 package com.MarketPlace.MarketAppPoo.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity // Responsável por criar a tabela
 @Table(name = "usuarios") // @Table, resposável por modificações/adições a tabela
@@ -8,25 +14,51 @@ public class ModelUser {
 
     @Id // Gerar chave primária
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Implementa auto incremento
-    private int cod; // responsável pela chave primária
+    private Long cod; // responsável pela chave primária
 
     private String nome;
     private int idade;
-    private String rg;
     private String cpf;
-    private int telefone;
+    private String telefone;
+
+    @Email(message = "Digite seu E-mail: ")
     private String email;
     private String senha;
+    private String fotoPerfil; //caminho da imagem
 
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private List<Produtos> produtos = new ArrayList<>();
+
+    //Construtor
+    public ModelUser(Long cod, String nome, int idade, String cpf, String telefone, String email, String senha, String fotoPerfil) {
+        this.cod = cod;
+        this.nome = nome;
+        this.idade = idade;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.email = email;
+        this.senha = senha;
+        this.fotoPerfil = fotoPerfil;
+    }
 
     // Getters and Setters
+    public ModelUser() {
 
+    }
 
-    public int getCod() {
+    public String getFotoPerfil() {
+        return fotoPerfil;
+    }
+
+    public void setFotoPerfil(String fotoPerfil) {
+        this.fotoPerfil = fotoPerfil;
+    }
+
+    public Long getCod() {
         return cod;
     }
 
-    public void setCod(int cod) {
+    public void setCod(Long cod) {
         this.cod = cod;
     }
 
@@ -46,14 +78,6 @@ public class ModelUser {
         this.idade = idade;
     }
 
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
-    }
-
     public String getCpf() {
         return cpf;
     }
@@ -62,11 +86,11 @@ public class ModelUser {
         this.cpf = cpf;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
@@ -84,5 +108,13 @@ public class ModelUser {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public List<Produtos> getProdutos() {
+        return produtos;
+    }
+
+    public void setProdutos(List<Produtos> produtos) {
+        this.produtos = produtos;
     }
 }

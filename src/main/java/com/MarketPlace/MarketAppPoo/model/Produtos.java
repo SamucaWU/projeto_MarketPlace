@@ -1,20 +1,36 @@
+
+
+// Desenvolved by Rafael Paiva 🔥
+
+
 package com.MarketPlace.MarketAppPoo.model;
 
 import jakarta.persistence.*;
 
 // Modelagem dos produtos
 @Entity
+
 @Table(name = "produto")
 public class Produtos {
     @Id // Marca como chave primária
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto incremento
     private long idprodutos;
+
+@Table(name = "produtos")
+public class Produtos {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long idprodutos;
+
+
     private  String nome;
     private  double preco;
     private  float peso;
     private  int quantidade;
     private  String categoria;
     private  String descricao;
+
     @Lob
     private byte[] imagem;
     @Transient // Importante: não persiste no banco
@@ -27,11 +43,51 @@ public class Produtos {
         this.selecionado = selecionado;
     }
     private String imagemUrl; // Se você estiver armazenando a URL da imagem
+
+
+    // Add by Samuel M. Dias (foreign key)
+    @ManyToOne
+    @JoinColumn(name = "cod", nullable = false)
+    private ModelUser usuario;
+
+    public ModelUser getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(ModelUser usuario) {
+        this.usuario = usuario;
+    }
+
+    public Produtos( Long idprodutos, String nome, double preco, float peso,int quantidade, String categoria, String descricao) {
+        this.idprodutos = idprodutos;
+        this.nome = nome;
+        this.preco = preco;
+        this.peso = peso;
+        this.quantidade = quantidade;
+        this.categoria = categoria;
+        this.descricao = descricao;
+
+
+    }
+
+
     public Produtos() {
 
     }
 
+
     // Getters e Setters
+
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+
     public Long getIdprodutos() {
         return idprodutos;
     }
@@ -52,7 +108,11 @@ public class Produtos {
         return preco;
     }
 
+
     public void setPreco(Double preco) {
+
+    public void setPreco(double preco) {
+
         this.preco = preco;
     }
 
@@ -64,6 +124,7 @@ public class Produtos {
         this.peso = peso;
     }
 
+
     public Integer getQuantidade() {
         return quantidade;
     }
@@ -71,6 +132,8 @@ public class Produtos {
     public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
     }
+
+
 
     public String getCategoria() {
         return categoria;
@@ -88,6 +151,7 @@ public class Produtos {
         this.descricao = descricao;
     }
 
+
     public byte[] getImagem() {
         return imagem;
     }
@@ -104,3 +168,6 @@ public class Produtos {
         this.imagemUrl = imagemUrl;
     }
 }
+
+}
+
