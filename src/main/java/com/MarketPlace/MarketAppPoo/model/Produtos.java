@@ -1,7 +1,4 @@
-
-
 // Desenvolved by Rafael Paiva 🔥
-
 
 package com.MarketPlace.MarketAppPoo.model;
 
@@ -9,13 +6,6 @@ import jakarta.persistence.*;
 
 // Modelagem dos produtos
 @Entity
-
-@Table(name = "produto")
-public class Produtos {
-    @Id // Marca como chave primária
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto incremento
-    private long idprodutos;
-
 @Table(name = "produtos")
 public class Produtos {
 
@@ -23,27 +13,12 @@ public class Produtos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idprodutos;
 
-
     private  String nome;
     private  double preco;
     private  float peso;
     private  int quantidade;
     private  String categoria;
     private  String descricao;
-
-    @Lob
-    private byte[] imagem;
-    @Transient // Importante: não persiste no banco
-    private boolean selecionado;
-    public boolean isSelecionado() {
-        return selecionado;
-    }
-
-    public void setSelecionado(boolean selecionado) {
-        this.selecionado = selecionado;
-    }
-    private String imagemUrl; // Se você estiver armazenando a URL da imagem
-
 
     // Add by Samuel M. Dias (foreign key)
     @ManyToOne
@@ -70,13 +45,9 @@ public class Produtos {
 
     }
 
-
     public Produtos() {
 
     }
-
-
-    // Getters e Setters
 
 
     public int getQuantidade() {
@@ -86,7 +57,6 @@ public class Produtos {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
-
 
     public Long getIdprodutos() {
         return idprodutos;
@@ -108,11 +78,7 @@ public class Produtos {
         return preco;
     }
 
-
-    public void setPreco(Double preco) {
-
     public void setPreco(double preco) {
-
         this.preco = preco;
     }
 
@@ -123,17 +89,6 @@ public class Produtos {
     public void setPeso(float peso) {
         this.peso = peso;
     }
-
-
-    public Integer getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
-    }
-
-
 
     public String getCategoria() {
         return categoria;
@@ -150,24 +105,4 @@ public class Produtos {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
-
-    public byte[] getImagem() {
-        return imagem;
-    }
-
-    public void setImagem(byte[] imagem) {
-        this.imagem = imagem;
-    }
-
-    public String getImagemUrl() {
-        return imagemUrl;
-    }
-
-    public void setImagemUrl(String imagemUrl) {
-        this.imagemUrl = imagemUrl;
-    }
 }
-
-}
-

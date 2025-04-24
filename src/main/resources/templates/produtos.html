@@ -1,16 +1,4 @@
 <!DOCTYPE html>
-
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastro de Produto</title>
-    <link rel="stylesheet" th:href="@{/styles.css}" />
-</head>
-<body>
-<h2>Cadastro de Produto</h2>
-
-<form th:action="@{/produtos}" th:object="${produto}" method="post" enctype="multipart/form-data">
-
 <html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -35,101 +23,17 @@
 <!-- Formulário de cadastro de produto -->
 <h2>Cadastro de Produto</h2>
 <form th:action="@{/produtos}" th:object="${produto}" method="post">
-
     <label for="nome">Nome:</label>
     <input type="text" id="nome" th:field="*{nome}" placeholder="Nome do produto" required>
 
     <label for="preco">Preço:</label>
-
-    <input type="number" id="preco" th:field="*{preco}" placeholder="Preço do produto" required>
-
-    <label for="peso">Peso:</label>
-    <input type="number" id="peso" th:field="*{peso}" placeholder="Peso do produto" required>
-
     <input type="number" id="preco" th:field="*{preco}" step="0.01" placeholder="Preço do produto" required>
 
     <label for="peso">Peso:</label>
     <input type="number" id="peso" th:field="*{peso}" step="0.01" placeholder="Peso do produto" required>
 
-
     <label for="quantidade">Quantidade:</label>
     <input type="number" id="quantidade" th:field="*{quantidade}" placeholder="Quantidade disponível" required>
-
-
-    <label for="categoria">Categoria:</label>
-    <select id="categoria" th:field="*{categoria}" required>
-        <option value="">Selecione uma categoria</option>
-        <option value="Roupas">Roupas</option>
-        <option value="Brinquedos">Brinquedos</option>
-        <option value="Eletrônicos">Eletrônicos</option>
-        <option value="Alimentos">Alimentos</option>
-        <option value="Outros">Outros</option>
-    </select>
-
-    <label for="descricao">Descrição:</label>
-    <textarea id="descricao" th:field="*{descricao}" placeholder="Descrição do produto" required></textarea>
-
-    <label for="imagem">Imagem do Produto:</label>
-    <input type="file" id="imagem" th:field="*{imagem}" accept="image/*" required />
-
-    <button type="submit">Cadastrar Produto</button>
-</form>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        display: flex;
-        justify-content: center;  /* Horizontally center content */
-        align-items: center;      /* Vertically center content */
-        height: 100vh;            /* Full height of the viewport */
-        flex-direction: column;   /* Allow stacking of elements in column */
-    }
-
-    h2 {
-        color: #333;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;  /* Adds spacing between form elements */
-        width: 300px;  /* You can adjust the width of the form */
-        margin: auto;  /* Centers the form */
-    }
-
-    label {
-        font-weight: bold;
-    }
-
-    textarea {
-        padding: 8px;
-        height: 100px;  /* Set a height for the description area */
-        resize: vertical;  /* Allows vertical resizing */
-    }
-
-    button {
-        padding: 10px 15px;
-        background-color: #28a745;
-        color: white;
-        border: none;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
-
-    button:hover {
-        background-color: #218838;
-    }
-
-    input {
-        padding: 8px;
-        width: 300px;
-    }
-</style>
-
-</body>
-</html>
 
     <label for="descricao">Descrição:</label>
     <textarea id="descricao" th:field="*{descricao}" placeholder="Descrição do produto" required></textarea>
@@ -150,4 +54,3 @@
 
 </body>
 </html>
-
