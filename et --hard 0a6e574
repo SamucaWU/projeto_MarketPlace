@@ -1,0 +1,12 @@
+[33m2c52310[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33m2c52310[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: rebase (finish): returning to refs/heads/main
+[33m2c52310[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{2}: rebase (start): checkout 2c523101dc0ae2f549c2c128acb67c8f3c355d42
+[33m2c52310[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{3}: rebase (finish): returning to refs/heads/main
+[33m2c52310[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{4}: rebase (start): checkout 2c523101dc0ae2f549c2c128acb67c8f3c355d42
+[33m0a6e574[m HEAD@{5}: reset: moving to HEAD
+[33m0a6e574[m HEAD@{6}: commit: atualização project 22/04/25
+[33m2c52310[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{7}: commit: atualização 12/04/25
+[33m0ce08a0[m HEAD@{8}: commit (merge): atualização 12/04/25
+[33mf49e98c[m HEAD@{9}: Branch: renamed refs/heads/master to refs/heads/main
+[33mf49e98c[m HEAD@{11}: commit: Atualização 12/04/25
+[33m076b291[m HEAD@{12}: commit (initial): atualização night 12/04/25

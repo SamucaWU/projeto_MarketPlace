@@ -2,10 +2,8 @@
 
 package com.MarketPlace.MarketAppPoo.controller;
 
-import com.MarketPlace.MarketAppPoo.model.ModelUser;
 import com.MarketPlace.MarketAppPoo.model.Produtos;
 import com.MarketPlace.MarketAppPoo.service.ProdutosService;
-import com.MarketPlace.MarketAppPoo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
