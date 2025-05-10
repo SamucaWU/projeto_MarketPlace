@@ -10,5 +10,6 @@ import java.util.List;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produtos, Long> {
+
         List<Produtos> findByUsuarioCod(Long cod);
 }

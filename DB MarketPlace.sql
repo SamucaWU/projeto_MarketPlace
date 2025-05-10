@@ -42,4 +42,3 @@ create table if not exists pagamento(
 
 show tables;
 select * from usuarios;
-drop table usuarios;
